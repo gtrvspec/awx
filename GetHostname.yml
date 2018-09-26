@@ -1,6 +1,5 @@
 ---
 - name: Get Hostname
-  hosts: NFSScan
   become: true
 
   tasks :
