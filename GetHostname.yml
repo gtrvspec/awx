@@ -1,0 +1,14 @@
+---
+- name: Get Hostname
+  hosts: NFSScan
+  become: true
+
+  tasks :
+    - name: Get Hostname via shell
+      command: whoami
+      register: result
+    - name: write result
+      debug:
+        msg: "Complete for {{ result.stdout.split('\n') }} "
+#        var: result
+#        verbosity: 2
