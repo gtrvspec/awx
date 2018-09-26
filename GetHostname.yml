@@ -1,7 +1,7 @@
 ---
 - name: Get Hostname
   become: true
-
+  hosts: Test
   tasks :
     - name: Get Hostname via shell
       command: whoami
