@@ -4,7 +4,7 @@
   hosts: rhel7_64Guest
   tasks :
     - name: Get Hostname via shell
-      command: whoami
+      command: hostname
       register: result
     - name: write result
       debug:
